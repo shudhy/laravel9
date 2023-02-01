@@ -4,3 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/dusn7235/public_html/
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp server.php $DEPLOYPATH
+    - /bin/cp -R resources $DEPLOYPATH
