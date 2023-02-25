@@ -22,9 +22,9 @@ route::middleware(['auth'])->group(function(){
 route::get('/warga',[WargaController::class,'index']);
 route::get('/warga/create',[WargaController::class,'create']);
 route::post('/warga/store',[WargaController::class,'store']);
-route::get('/warga/{id}/edit',[WargaController::class,'edit']);
-route::put('/warga/{id}',[WargaController::class,'update']);
-route::delete('/warga/{id}',[WargaController::class,'destroy']);
+route::get('/warga/{id}/edit',[WargaController::class,'edit'])->name('warga.edit');
+route::put('/warga/{id}',[WargaController::class,'update'])->name('warga.update');
+route::delete('/warga/{id}',[WargaController::class,'destroy'])->name('warga.destroy');
 });
 
 

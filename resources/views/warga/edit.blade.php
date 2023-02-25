@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Edit Data') }}</div>
 
                 <div class="card-body">
-                    <form action="/warga/{{$warga->id}}" method="POST">
+                    <form action="{{ route('warga.update',$warga->id) }}" method="POST">
                     @method('put')
                     @csrf
                     <div class="mb-3">

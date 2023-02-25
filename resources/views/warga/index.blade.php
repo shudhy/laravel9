@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Warga') }}</div>
 
                 <div class="card-body">
-                   <a href="/warga/create" class="btn btn-primary">Create warga</a>
+                   <a href="{{ url('/warga/create'); }}" class="btn btn-primary">Create warga</a>
         <table class="table table-hover" >
         <th>
             <td>id</td>
@@ -30,8 +30,8 @@
             <td>{{$w->alamat}}</td>
             <td>
                 <div class="btn-group" role="group" aria-label="Basic example">
-                    <a class="btn btn-warning" href="/warga/{{$w->id}}/edit">Edit</a>
-            <form action="/warga/{{$w->id}}" method="POST">
+                    <a class="btn btn-warning" href="{{ route('warga.edit',$w->id) }}">Edit</a>
+            <form action="{{ route('warga.destroy',$w->id) }}" method="POST">
                     @csrf
                     @method('delete')
                     <input class="btn btn-danger" type="submit" value="delete">

@@ -9,7 +9,7 @@
 
                 <div class="card-body">
 
-                <form action="/warga/store" method="POST">
+                <form action="{{ url('/warga/store'); }}" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label class="form-label">Nama</label>
