@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WargaController;
+use App\Http\Controllers\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,14 @@ route::post('/warga/store',[WargaController::class,'store']);
 route::get('/warga/{id}/edit',[WargaController::class,'edit'])->name('warga.edit');
 route::put('/warga/{id}',[WargaController::class,'update'])->name('warga.update');
 route::delete('/warga/{id}',[WargaController::class,'destroy'])->name('warga.destroy');
+
+route::get('/item',[ItemController::class,'index']);
+route::get('/item/create',[ItemController::class,'create']);
+route::post('/item/store',[ItemController::class,'store']);
+route::get('/item/{id}/edit',[ItemController::class,'edit'])->name('item.edit');
+route::put('/item/{id}',[ItemController::class,'update'])->name('item.update');
+route::delete('/item/{id}',[ItemController::class,'destroy'])->name('item.destroy');
+
 });
 
 
