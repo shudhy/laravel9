@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Warga') }}</div>
 
                 <div class="card-body">
-                   <a href="/warga/create" class="btn btn-primary">Create warga</a>
+                   <a href="/public/warga/create" class="btn btn-primary">Create warga</a>
         <table class="table table-hover" >
         <th>
             <td>id</td>
