@@ -12,25 +12,34 @@
         <table class="table table-hover" >
         <th>
             <td>id</td>
-            <td>BARCODE</td>
-            <td>NAME</td>
-            <td>DESC</td>
-            <td>BRAND</td>
-            <td>IMG</td>
-            <td>HARGA</td>
-            <td>AKSI</td>
+            <td>barcode</td>
+            <td>produk terjual</td>
+            <td>nama produk</td>
+            <td>aktif</td>
+            <td>isi</td>
+            <td>foto</td>
+            <td>harga</td>
+            <td>diskon</td>
+            <td>berat</td>
+            <td>aksi</td>
         </th>
         @foreach($item as $i)
         <tr>
-            <td></td>
             <td>{{$i->id}}</td>
             <td>{{$i->barcode}}</td>
-            <td>{{$i->name}}</td>
-            <td>{{$i->desc}}</td>
-            <td>{{$i->brand_id}}</td>
-            <td>{{$i->itemgrp_id}}</td>
-            <td>{{$i->img_id}}</td>
-            <td>{{$i->harga_id}}</td>
+            <td>{{$i->stok_produk}}</td>
+            <td>{{$i->terjual_produk}}</td>
+            <td>{{$i->nm_produk}}</td>
+            <td>{{$i->aktif_produk}}</td>
+            <td>{{$i->isi_produk}}</td>
+            <td>
+                @if ($i->foto_produk)
+                    <img style="max-width:50px; max-height:50px" src="{{ url('item_foto').'/'.$i->foto_produk}}"/>
+                @endif
+            </td>
+            <td>{{$i->harga_produk}}</td>
+            <td>{{$i->diskon_produk}}</td>
+            <td>{{$i->berat_produk}}</td>
             <td>
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <a class="btn btn-warning" href="{{ route('item.edit',$i->id) }}">Edit</a>
